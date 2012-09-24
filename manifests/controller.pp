@@ -1,4 +1,4 @@
-class icclab::controller{
+class sws::controller{
 
   include icclab::params
 
