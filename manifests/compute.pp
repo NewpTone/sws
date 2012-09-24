@@ -1,10 +1,10 @@
-class icclab::compute{
+class sws::compute{
 
-  include icclab::params
+  include sws::params
 
-  $controller_node_public   = $icclab::params::controller_node_address
-  $controller_node_internal = $icclab::params::controller_node_address
-  $sql_connection         = "mysql://nova:${icclab::params::nova_db_password}@${controller_node_internal}/nova"
+  $controller_node_public   = $sws::params::controller_node_address
+  $controller_node_internal = $sws::params::controller_node_address
+  $sql_connection         = "mysql://nova:${sws::params::nova_db_password}@${controller_node_internal}/nova"
 
   class { 'openstack::compute':
     public_interface   => 'eth0',

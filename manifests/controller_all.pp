@@ -1,10 +1,10 @@
-class sws::controller{
+class sws::controller_all{
 
-  include icclab::params
+  include sws::params
 
-  $controller_node_public   = $icclab::params::controller_node_address
-  $controller_node_internal = $icclab::params::controller_node_address
-  $sql_connection           = "mysql://nova:${icclab::params::nova_db_password}@${controller_node_internal}/nova"
+  $controller_node_public   = $sws::params::controller_node_address
+  $controller_node_internal = $sws::params::controller_node_address
+  $sql_connection           = "mysql://nova:${sws::params::nova_db_password}@${controller_node_internal}/nova"
 
   $admin_password           = 'admin_pass'
   $keystone_admin_token     = 'keystone_pass'

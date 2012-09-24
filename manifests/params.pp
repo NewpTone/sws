@@ -1,4 +1,4 @@
-class icclab::params{
+class sws::params{
 
   #this contains the _basic_ common configuration
   /* ---------------Important to set!------------------*/
