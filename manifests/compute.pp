@@ -71,7 +71,7 @@ class sws::compute{
     rabbit_host        => $controller_node_internal,
     rabbit_password    => $rabbit_password,
     rabbit_user        => $rabbit_user,
-    glance_api_servers => "$glance_api_servers",
+    glance_api_servers => $glance_api_servers,
     vncproxy_host      => $vncproxy_host,
     vnc_enabled        => $vnc_enabled,
     verbose            => $verbose,
