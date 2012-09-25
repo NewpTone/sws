@@ -99,7 +99,7 @@ class sws::controller_all{
     glance_user_password    => $glance_user_password,
     nova_db_password        => $nova_db_password,
     nova_user_password      => $nova_user_password,
-    rabbit_password         => $rabbit_pass,
+    rabbit_password         => $rabbit_password,
     rabbit_user             => $rabbit_user,
     export_resources        => $export_resources,
   }
