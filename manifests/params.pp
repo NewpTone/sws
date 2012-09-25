@@ -4,7 +4,7 @@ class sws::params{
   $admin_email          = 'admin@sws.com'
   $admin_password	= 'admin_pass' 
   $auto_assign_floating_ip 	= false
-  $controller_node_address 	= '192.168.56.3'
+  $controller_node_public 	= '192.168.56.3'
   $controller_node_internal	= $controller_node_address
   $export_resources     = false
   $floating_range       = '192.168.56.128/25'
