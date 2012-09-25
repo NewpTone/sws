@@ -4,8 +4,10 @@ class sws::params{
   $admin_email          = 'admin@sws.com'
   $admin_password	= 'admin_pass' 
   $auto_assign_floating_ip 	= false
-  $controller_node_public 	= '192.168.56.3'
-  $controller_node_internal	= $controller_node_address
+  if $controller_node_public == undef{
+    $controller_node_public 	= "127.0.0.1"
+  }
+  $controller_node_internal	= $controller_node_public
   $export_resources     = false
   $floating_range       = '192.168.56.128/25'
   $fixed_range          = '10.0.0.0/24'
@@ -23,7 +25,7 @@ class sws::params{
   $nova_db_password 	= 'nova_pass'
   $nova_user_password   = 'nova_pass'
   $nova_volume        	= 'nova-volumes'
-  $rabbit_host        	=> $controller_node_internal
+  $rabbit_host        	= $controller_node_internal
   $rabbit_password      = 'rabbit_pass'
   $rabbit_user          = 'rabbit_user'
   $public_address	= $controller_node_public

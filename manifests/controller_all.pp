@@ -2,7 +2,8 @@ class sws::controller_all{
 
   include sws::params
   if $controller_node_public == undef{
-	$controller_node_public   = $sws::params::controller_node_address
+	$controller_node_public   = $sws::params::controller_node_public
+  	#$controller_node_public	=$::ipaddress
   }
   if $controller_node_internal == undef{
   	$controller_node_internal = $sws::params::controller_node_internal
@@ -38,7 +39,7 @@ class sws::controller_all{
   	$verbose = $sws::params::verbose
   }
   if $auto_assign_floating_ip == undef{
-  	$auto_assign_floating_ip=$sws:params::auto_assign_floating_ip
+  	$auto_assign_floating_ip=$sws::params::auto_assign_floating_ip
   }
   if $mysql_root_password == undef{
   	$mysql_root_password = $sws::params::mysql_root_password
@@ -50,7 +51,7 @@ class sws::controller_all{
   	$admin_password = $sws::params::admin_password
   }
   if $keystone_db_password == undef{
-  	$keystone_db_password = $sws:params::keystone_db_password
+  	$keystone_db_password = $sws::params::keystone_db_password
   }
   if $keystone_admin_token == undef{
    	$keystone_admin_token = $sws::params::keystone_admin_token

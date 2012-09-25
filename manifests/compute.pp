@@ -3,7 +3,7 @@ class sws::compute{
   include sws::params
 
   if $controller_node_public == undef{
-	$controller_node_public   = $sws::params::controller_node_address
+	$controller_node_public   = $sws::params::controller_node_public
   }
   if $controller_node_internal == undef{
   	$controller_node_internal = $sws::params::controller_node_internal
@@ -18,7 +18,7 @@ class sws::compute{
     	$private_interface = $sws::params::private_interface
   }
   if $libvirt_type == undef{
-    	$private_interface = $sws::params::libvirt_type
+    	$libvirt_type = $sws::params::libvirt_type
   }
   if $fixed_range == undef{
   	$fixed_range = $sws::params::fixed_range
