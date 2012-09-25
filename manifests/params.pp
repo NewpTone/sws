@@ -1,7 +1,7 @@
 class sws::params{
   #this contains the _basic_ common configuration
   /* ---------------Important to set!------------------*/
-  $admin_email          = 'admin@iownz.you'
+  $admin_email          = 'admin@sws.com'
   $admin_password	= 'admin_pass' 
   $auto_assign_floating_ip 	= false
   $controller_node_address 	= '192.168.56.3'
